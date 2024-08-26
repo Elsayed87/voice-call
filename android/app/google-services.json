@@ -1,0 +1,50 @@
+{
+    "project_info": {
+      "project_number": "885336946947",
+      "firebase_url": "https://t-driver-f7f5a-default-rtdb.firebaseio.com",
+      "project_id": "t-driver-f7f5a",
+      "storage_bucket": "t-driver-f7f5a.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:885336946947:android:d363c275bd9b5dbda6d136",
+          "android_client_info": {
+            "package_name": "com.RN_3T_Driver"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyA2dIVeGXx9a1a8MX_DOOT9yJxuukzSI9I"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      },
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:885336946947:android:d30dc6e22d3bb987a6d136",
+          "android_client_info": {
+            "package_name": "com.userapp"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyA2dIVeGXx9a1a8MX_DOOT9yJxuukzSI9I"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
+  

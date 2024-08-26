@@ -1,40 +1,34 @@
-import React, { useEffect } from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {ZegoCallInvitationDialog} from '@zegocloud/zego-uikit-prebuilt-call-rn';
+import LoginScreen from '../login';
+import HomeScreen from '../home';
 import {
-  ZegoCallInvitationDialog,
-  ZegoUIKitPrebuiltCallWaitingScreen,
   ZegoUIKitPrebuiltCallInCallScreen,
+  ZegoUIKitPrebuiltCallWaitingScreen,
 } from '@zegocloud/zego-uikit-prebuilt-call-rn';
-
-import HomeScreen from './src/screens/home';
-import CallScreen from './src/screens/call';
-import useZegoCallService from './src/screens/serviceZego';
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
-  const { initializeCallService } = useZegoCallService();
-
-  useEffect(() => {
-    initializeCallService();
-  }, [initializeCallService]);
+export default function MyStack() {
   return (
     <NavigationContainer>
-      {/* Call Invitation Dialog to handle incoming calls */}
       <ZegoCallInvitationDialog />
 
-      {/* Stack Navigator for screen navigation */}
       <Stack.Navigator initialRouteName="HomeScreen">
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="CallScreen" component={CallScreen} />
+
         <Stack.Screen
           options={{headerShown: false}}
+          // DO NOT change the name
           name="ZegoUIKitPrebuiltCallWaitingScreen"
           component={ZegoUIKitPrebuiltCallWaitingScreen}
         />
         <Stack.Screen
           options={{headerShown: false}}
+          // DO NOT change the name
           name="ZegoUIKitPrebuiltCallInCallScreen"
           component={ZegoUIKitPrebuiltCallInCallScreen}
         />
